@@ -1,0 +1,29 @@
+//
+//  Header.h
+//  项目
+//
+//  Created by ma c on 16/6/15.
+//  Copyright © 2016年 SMU. All rights reserved.
+//
+
+#ifndef Header_pch
+#define Header_pch
+
+#import <Masonry.h>
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+#import <MJExtension.h>
+
+#define RGB(r,g,b) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1]
+
+#define WS(weakSelf) __unsafe_unretained __typeof(&*self)weakSelf = self;
+#define mas_equalTo(...)                 equalTo(MASBoxValue((__VA_ARGS__)))
+#define mas_offset(...)                  valueOffset(MASBoxValue((__VA_ARGS__)))
+#define equalTo(...)                     mas_equalTo(__VA_ARGS__)
+#define offset(...)                      mas_offset(__VA_ARGS__)
+#define VIEW_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define VIEW_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define Rect(x, y, w, h)                    CGRectMake(x, y, w, h)
+
+
+#endif /* Header_pch */
